@@ -8,7 +8,7 @@ body {
     font-family: Roboto, system, Segoe UI, Tahoma, -apple-system;
 }
 
-.nav-bar-small a:hover, .nav-bar-main-item a:hover .box-list-item a:hover, .event-list-item a:hover {
+.nav-bar-small a:hover, .nav-bar-main-item a:hover, .box-list-item a:hover, .event-list-item a:hover {
     text-decoration: underline;
 }
 
@@ -57,6 +57,42 @@ body {
 .nav-bar-small a {
     text-decoration: none;
     color: #000;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+  
+.tooltip .tooltip-text {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    opacity: 0.8;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 50%;
+    margin-left: -60px;
+}
+  
+.tooltip .tooltip-text::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
+}
+  
+.tooltip:hover .tooltip-text {
+    visibility: visible;
 }
 
 .header-full-width {
@@ -211,12 +247,13 @@ body {
     position: relative;
     justify-content: space-around;
     align-items: center;
-    height: 300px;
+    height: auto;
 }
 
 .first-section-content {
     flex: 1;
     max-width: 32%;
+    align-self: flex-start;
 }
 
 .image-box-container {
@@ -259,6 +296,7 @@ body {
 .questions-box {
     height: 100%;
     background-color: #fff;
+    min-height: 300px;
 }
 
 .questions-box .box-header {
@@ -274,19 +312,28 @@ body {
     flex: 1;
     display: flex;
     flex-direction: column;
+    overflow-y: auto;
+    box-shadow: 0 2px 3px rgba(0,0,0,.08);
 }
 
 .questions-list-item {
     border-top: 1px solid #e5e5e5;
+    background: linear-gradient(to bottom,#fff,#f9f9f9);
     flex: 1;
     display: flex;
-    align-items: center;
     padding-left: 10px;
     position: relative;
+    align-items: center; 
+    min-height: 51px;
+}
+
+.questions-list-item:hover {
+    cursor: pointer;
 }
 
 .questions-list-item h4 {
     font-weight: normal;
+    font-size: 1em;
 }
 
 .questions-list-item i {
@@ -296,9 +343,28 @@ body {
 
 .accordion-panel {
     padding: 0 18px;
-    background-color: white;
+    background-color: #f4f4f4;
     display: none;
-    overflow: hidden;
+    height: auto;
+    border-top: 1px solid #e5e5e5;
+    padding: 10px 10px;
+}
+
+.accordion-panel article p {
+    padding: 10px;
+}
+
+.accordion-panel article ul {
+    margin-left: 30px;
+    list-style-type: none;
+}
+
+.accordion-panel article ul li::before {
+    color:  #ec6701;
+    content: "\25AA";
+    display: inline-block; 
+    width: 1em;
+    margin-left: -1em;
 }
 
 .two-boxes {
@@ -527,8 +593,10 @@ body {
 
 .contact-banner-item p {
     margin-top: 20px;
+    height: 80px;
 }
 .contact-banner-link {
+    border-top: 1px solid #dbdbdb;
     margin: 20px 0px;
     text-decoration: none;
     color: #ae0b05;
@@ -537,6 +605,8 @@ body {
     text-transform: uppercase;
     font-weight: bold;
     transition: font-size 0.5s;
+    height: 20px;
+    padding-top: 10px;
 }
 
 .contact-banner-extra {
@@ -649,14 +719,14 @@ footer {
 }
 
 .fa:hover {
-    color: #424242;
+    color: #000;
 }
 
 .fa-arrow-circle-o-right {
     margin-right: 5px;
 }
 
-.fa-arrow-circle-o-right:hover {
+.fa-arrow-circle-o-right:hover, .questions-list-item i:hover {
     color: #424242;
 }
 
@@ -772,6 +842,10 @@ footer {
 
 .elevator-button a i {
     padding-right: 10px;
+    color: #fff;
+}
+
+.elevator-button a i:hover {
     color: #fff;
 }
 

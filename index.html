@@ -12,6 +12,7 @@
     <script src="script.js" defer></script>
     <script src="chat-bot-script.js" defer></script>
     <script src="accordion-menu.js" defer></script>
+    <script src="events-script.js" defer></script>
 </head>
 
 <body>
@@ -20,7 +21,8 @@
         <header id="header">
             <div class="header-80-width">
                 <div class="header-quarter header-left">
-                    <a href="index.html"><img src="images/Helsingborg-Logo.JPG" alt="Helsingborg Town Logo"></a>
+                    <a class="tooltip" href="index.html"><img src="images/Helsingborg-Logo.JPG"
+                            alt="Helsingborg Town Logo"><span class="tooltip-text">Gå till startsidan</span></a>
                 </div>
                 <div class="header-qaurter header-right">
                     <div class="nav-bar-small-container">
@@ -104,115 +106,115 @@
                         <div class="questions-content">
                             <div class="questions-list">
                                 <div class="questions-list-item">
-                                    <h4>Fakturafrågor</h4><i class="fa fa-plus-circle circle-right"
+                                    <h4>Fakturafrågor</h4><i class="fa fa-plus-circle circle-right plus-icon"
                                         aria-hidden="true"></i>
-                                    <div class="accordion-panel">
-                                        <article>
-                                            <p>Du kan chatta med eller ringa till kontaktcenter om du vill ha hjälp med
-                                                något av följande:</p>
-                                            <ul>
-                                                <li>Fakturakopia, OCR-nummer eller belopp.</li>
-                                                <li>Samt även autogiroblankett dock endast för hemvårdsinsatser.</li>
-                                            </ul>
-                                            <p>Behöver du få hjälp med att tolka en faktura ringer du den referens på
-                                                det telefonnummer som står längst ner till vänster på din faktura.</p>
-                                            <p><strong>Tips:</strong> Anmäl dina fakturor från Helsingborgs stad som
-                                                e-faktura. Då tappar du inte bort dem! Anmälan om e-faktura gör du hos
-                                                din bank!</p>
-                                        </article>
-                                    </div>
+                                </div>
+                                <div class="accordion-panel">
+                                    <article>
+                                        <p>Du kan chatta med eller ringa till kontaktcenter om du vill ha hjälp med
+                                            något av följande:</p>
+                                        <ul>
+                                            <li>Fakturakopia, OCR-nummer eller belopp.</li>
+                                            <li>Samt även autogiroblankett dock endast för hemvårdsinsatser.</li>
+                                        </ul>
+                                        <p>Behöver du få hjälp med att tolka en faktura ringer du den referens på
+                                            det telefonnummer som står längst ner till vänster på din faktura.</p>
+                                        <p><strong>Tips:</strong> Anmäl dina fakturor från Helsingborgs stad som
+                                            e-faktura. Då tappar du inte bort dem! Anmälan om e-faktura gör du hos
+                                            din bank!</p>
+                                    </article>
                                 </div>
                                 <div class="questions-list-item">
-                                    <h4>Får vi ett skolbusskort</h4><i class="fa fa-plus-circle circle-right"
+                                    <h4>Får vi ett skolbusskort</h4><i class="fa fa-plus-circle circle-right plus-icon"
                                         aria-hidden="true"></i>
-                                    <div class="accordion-panel">
-                                        <article>
-                                            <p><u><strong>Har haft resekort i våras:</strong></u><br>
-                                                Elever som redan har ett resekort för resa med buss eller tåg till
-                                                skolan får sin nya skolbiljett laddad på samma kort, förutsatt att
-                                                eleven har rätt till skolskjuts. Detta gäller alla årskurser, från
-                                                förskoleklass.<br>
-                                                Om du inte har kvar kortet behöver du vända dig till Helsingborg
-                                                kontaktcenter för att köpa ett nytt kort mot en avgift.</p>
-                                            <p><u><strong>Har inte haft reskort tidigare:</strong></u></p>
-                                            <p>Elever från årskurs 4&nbsp;som inte har haft skolbiljett tidigare men har
-                                                rätt till det nu, får ett resekort laddat med sin skolbiljett hemskickat
-                                                till sig automatiskt. Du behöver i regel inte ansöka om detta, undantag
-                                                kan vara om&nbsp;du nyligen&nbsp;har flyttat eller bytt skola, eller om
-                                                du går i gymnasieskola utanför Skåne.<br>
-                                                Elever i årskurs 1-3 i grundskola behöver göra en ansökan genom att
-                                                kontakta Helsingborg Kontaktcenter.</p>
-                                            <p>Om resekortet inte har dykt upp någon vecka in på terminsstarten, hör av
-                                                dig till oss på&nbsp;Helsingborg Kontaktcenter. Elever som är
-                                                berättigade till skolbiljett får resa med Skånetrafikens bussar och tåg
-                                                utan kort under terminens fem första skoldagar.</p>
-                                            <p>Läs mer om skolbiljett för grundskola här: <a
-                                                    title="https://helsingborg.se/forskola-och-utbildning/grundskola/skolresa-skolskjuts/"
-                                                    href="https://helsingborg.se/forskola-och-utbildning/grundskola/skolresa-skolskjuts/"
-                                                    target="_blank"
-                                                    rel="noreferrer noopener">https://helsingborg.se/forskola-och-utbildning/grundskola/skolresa-skolskjuts/</a>
-                                            </p>
-                                            <p>Läs mer om skolbiljett för gymnasieskola här: <a
-                                                    title="https://helsingborg.se/forskola-och-utbildning/gymnasium/ekonomi-resor-och-boende/"
-                                                    href="https://helsingborg.se/forskola-och-utbildning/gymnasium/ekonomi-resor-och-boende/"
-                                                    target="_blank"
-                                                    rel="noreferrer noopener">https://helsingborg.se/forskola-och-utbildning/gymnasium/ekonomi-resor-och-boende/</a>
-                                            </p>
-                                        </article>
-                                    </div>
+                                </div>
+                                <div class="accordion-panel">
+                                    <article>
+                                        <p><u><strong>Har haft resekort i våras:</strong></u><br>
+                                            Elever som redan har ett resekort för resa med buss eller tåg till
+                                            skolan får sin nya skolbiljett laddad på samma kort, förutsatt att
+                                            eleven har rätt till skolskjuts. Detta gäller alla årskurser, från
+                                            förskoleklass.<br>
+                                            Om du inte har kvar kortet behöver du vända dig till Helsingborg
+                                            kontaktcenter för att köpa ett nytt kort mot en avgift.</p>
+                                        <p><u><strong>Har inte haft reskort tidigare:</strong></u></p>
+                                        <p>Elever från årskurs 4&nbsp;som inte har haft skolbiljett tidigare men har
+                                            rätt till det nu, får ett resekort laddat med sin skolbiljett hemskickat
+                                            till sig automatiskt. Du behöver i regel inte ansöka om detta, undantag
+                                            kan vara om&nbsp;du nyligen&nbsp;har flyttat eller bytt skola, eller om
+                                            du går i gymnasieskola utanför Skåne.<br>
+                                            Elever i årskurs 1-3 i grundskola behöver göra en ansökan genom att
+                                            kontakta Helsingborg Kontaktcenter.</p>
+                                        <p>Om resekortet inte har dykt upp någon vecka in på terminsstarten, hör av
+                                            dig till oss på&nbsp;Helsingborg Kontaktcenter. Elever som är
+                                            berättigade till skolbiljett får resa med Skånetrafikens bussar och tåg
+                                            utan kort under terminens fem första skoldagar.</p>
+                                        <p>Läs mer om skolbiljett för grundskola här: <a
+                                                title="https://helsingborg.se/forskola-och-utbildning/grundskola/skolresa-skolskjuts/"
+                                                href="https://helsingborg.se/forskola-och-utbildning/grundskola/skolresa-skolskjuts/"
+                                                target="_blank"
+                                                rel="noreferrer noopener">https://helsingborg.se/forskola-och-utbildning/grundskola/skolresa-skolskjuts/</a>
+                                        </p>
+                                        <p>Läs mer om skolbiljett för gymnasieskola här: <a
+                                                title="https://helsingborg.se/forskola-och-utbildning/gymnasium/ekonomi-resor-och-boende/"
+                                                href="https://helsingborg.se/forskola-och-utbildning/gymnasium/ekonomi-resor-och-boende/"
+                                                target="_blank"
+                                                rel="noreferrer noopener">https://helsingborg.se/forskola-och-utbildning/gymnasium/ekonomi-resor-och-boende/</a>
+                                        </p>
+                                    </article>
                                 </div>
                                 <div class="questions-list-item">
-                                    <h4>Hur anmäler jag mig till SFI?</h4><i class="fa fa-plus-circle circle-right"
+                                    <h4>Hur anmäler jag mig till SFI?</h4><i class="fa fa-plus-circle circle-right plus-icon"
                                         aria-hidden="true"></i>
-                                    <div class="accordion-panel">
-                                        <article>
-                                            <p>Anmäl dig till SFI på länken nedan.</p>
-                                            <p>När du har anmält dig så kommer du att få ett e-mejl skickat till dig.
-                                                Kontrollera så att detta inte har hamnat i din skräppost.</p>
-                                            <p>I mejlet får du en länk till att välja vilken skola du ska gå på.</p>
-                                            <p>När du har valt skola så kommer du att få instruktioner i ett nytt mejl
-                                                från skolan.</p>
-                                            <p><a
-                                                    href="https://helsingborg.se/forskola-och-utbildning/vuxenutbildning/utbildningar/sfi-svenskundervisning-for-invandrare/">Klicka
-                                                    här för att läsa mer och anmäla dig till SFI</a></p>
-                                        </article>
-                                    </div>
+                                </div>
+                                <div class="accordion-panel">
+                                    <article>
+                                        <p>Anmäl dig till SFI på länken nedan.</p>
+                                        <p>När du har anmält dig så kommer du att få ett e-mejl skickat till dig.
+                                            Kontrollera så att detta inte har hamnat i din skräppost.</p>
+                                        <p>I mejlet får du en länk till att välja vilken skola du ska gå på.</p>
+                                        <p>När du har valt skola så kommer du att få instruktioner i ett nytt mejl
+                                            från skolan.</p>
+                                        <p><a
+                                                href="https://helsingborg.se/forskola-och-utbildning/vuxenutbildning/utbildningar/sfi-svenskundervisning-for-invandrare/">Klicka
+                                                här för att läsa mer och anmäla dig till SFI</a></p>
+                                    </article>
                                 </div>
                                 <div class="questions-list-item">
                                     <h4>Hur beställer jag min gymansiebetyg?</h4><i
-                                        class="fa fa-plus-circle circle-right" aria-hidden="true"></i>
-                                    <div class="accordion-panel">
-                                        <article>
-                                            <p>Gymnasiebetyg som är äldre än fyra år ska finnas på stadsarkivet. Betyg
-                                                som är yngre än fyra år beställs genom skolan du gick på.</p>
-                                            <p><a
-                                                    href="https://helsingborg.se/uppleva-och-gora/stadsarkivet/bestalla-betyg/">Klicka
-                                                    här för att komma till beställningsformulär för stadsarkivet.</a>
-                                            </p>
-                                            <p><a
-                                                    href="https://helsingborg.se/forskola-och-utbildning/helsingborgs-stads-skolor/">Klicka
-                                                    här för att komma till stadens grund och gymnasieskolor.</a></p>
-                                        </article>
-                                    </div>
+                                        class="fa fa-plus-circle circle-right plus-icon" aria-hidden="true"></i>
+                                </div>
+                                <div class="accordion-panel">
+                                    <article>
+                                        <p>Gymnasiebetyg som är äldre än fyra år ska finnas på stadsarkivet. Betyg
+                                            som är yngre än fyra år beställs genom skolan du gick på.</p>
+                                        <p><a
+                                                href="https://helsingborg.se/uppleva-och-gora/stadsarkivet/bestalla-betyg/">Klicka
+                                                här för att komma till beställningsformulär för stadsarkivet.</a>
+                                        </p>
+                                        <p><a
+                                                href="https://helsingborg.se/forskola-och-utbildning/helsingborgs-stads-skolor/">Klicka
+                                                här för att komma till stadens grund och gymnasieskolor.</a></p>
+                                    </article>
                                 </div>
                                 <div class="questions-list-item">
-                                    <h4>Hur läser jag upp mina betyg?</h4><i class="fa fa-plus-circle circle-right"
+                                    <h4>Hur läser jag upp mina betyg?</h4><i class="fa fa-plus-circle circle-right plus-icon"
                                         aria-hidden="true"></i>
-                                    <div class="accordion-panel">
-                                        <article>
-                                            <p>Vet du vad du ska läsa så ansöker ni genom denna e-tjänsten <a
-                                                    href="https://eservice.helsingborg.se/MenuGroup2.aspx?groupId=36">https://eservice.helsingborg.se/MenuGroup2.aspx?groupId=36</a>
-                                            </p>
-                                            <p>Vet du INTE vad du ska studera så kan ni läsa om vad dina förkunskapskrav
-                                                bör vara för varje utbildning i utbildningens informationsdel. Ni finner
-                                                samtliga utbildningar här <a
-                                                    href="https://helsingborg.se/forskola-och-utbildning/vuxenutbildning/utbildningar/">https://helsingborg.se/forskola-och-utbildning/vuxenutbildning/utbildningar/</a>.
-                                                Hjälper inte den informationen dig kan ni alltid mejla till <a
-                                                    href="mailto:syv.amf@helsingborg.se">syv.amf@helsingborg.se</a> där
-                                                ni beskriver er fråga tillsammans med namn, telefon, hemkommun och
-                                                personnummer.</p>
-                                        </article>
-                                    </div>
+                                </div>
+                                <div class="accordion-panel">
+                                    <article>
+                                        <p>Vet du vad du ska läsa så ansöker ni genom denna e-tjänsten <a
+                                                href="https://eservice.helsingborg.se/MenuGroup2.aspx?groupId=36">https://eservice.helsingborg.se/MenuGroup2.aspx?groupId=36</a>
+                                        </p>
+                                        <p>Vet du INTE vad du ska studera så kan ni läsa om vad dina förkunskapskrav
+                                            bör vara för varje utbildning i utbildningens informationsdel. Ni finner
+                                            samtliga utbildningar här <a
+                                                href="https://helsingborg.se/forskola-och-utbildning/vuxenutbildning/utbildningar/">https://helsingborg.se/forskola-och-utbildning/vuxenutbildning/utbildningar/</a>.
+                                            Hjälper inte den informationen dig kan ni alltid mejla till <a
+                                                href="mailto:syv.amf@helsingborg.se">syv.amf@helsingborg.se</a> där
+                                            ni beskriver er fråga tillsammans med namn, telefon, hemkommun och
+                                            personnummer.</p>
+                                    </article>
                                 </div>
                             </div>
                         </div>
@@ -252,42 +254,42 @@
                         <div class="event-content">
                             <ul class="event-list">
                                 <li class="event-list-item"><span class="event-date"><span class="when">4-20</span><span
-                                            class="month-or-time">sep</span></span><a href="apology.html"><i
+                                            class="month-or-time">sep</span></span><a class="event-description" href="apology.html"><i
                                             class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>Utställning:
                                         Josef
                                         Franks
                                         flora</a></li>
                                 <li class="event-list-item"><span class="event-date"><span class="when">7-20</span><span
-                                            class="month-or-time">sep</span></span><a href="apology.html"><i
+                                            class="month-or-time">sep</span></span><a class="event-description" href="apology.html"><i
                                             class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>Utställning:
                                         Passion för pelargon</a>
                                 </li>
                                 <li class="event-list-item"><span class="event-date"><span class="when">Idag</span><span
-                                            class="month-or-time">08:00</span></span><a href="apology.html"><i
+                                            class="month-or-time">08:00</span></span><a class="event-description" href="apology.html"><i
                                             class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>Internationella
                                         suicidpreventionsdagen –
                                         10 september</a></li>
                                 <li class="event-list-item"><span class="event-date"><span class="when">Idag</span><span
-                                            class="month-or-time">10:00</span></span><a href="apology.html"><i
+                                            class="month-or-time">10:00</span></span><a class="event-description" href="apology.html"><i
                                             class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>Barnvagnsvisning
                                         i
                                         Från gryning till
                                         skymning – nordisk konst kring sekelskiftet 1900</a></li>
                                 <li class="event-list-item"><span class="event-date"><span class="when">Idag</span><span
-                                            class="month-or-time">12:15</span></span><a href="apology.html"><i
+                                            class="month-or-time">12:15</span></span><a class="event-description" href="apology.html"><i
                                             class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>Soppteater</a>
                                 </li>
                                 <li class="event-list-item"><span class="event-date"><span class="when">Idag</span><span
-                                            class="month-or-time">14:00</span></span><a href="apology.html"><i
+                                            class="month-or-time">14:00</span></span><a class="event-description" href="apology.html"><i
                                             class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>DigiDax</a>
                                 </li>
                             </ul>
                             <div class="event-footer">
                                 <ul>
-                                    <li class="event-page-numbers"><a href="apology.html">1</a></li>
-                                    <li class="event-page-numbers"><a href="apology.html">2</a></li>
-                                    <li class="event-page-numbers"><a href="apology.html">3</a></li>
-                                    <li class="event-page-numbers"><a href="apology.html">4</a></li>
+                                    <li id="event-page-number-1" class="event-page-numbers"><a>1</a></li>
+                                    <li id="event-page-number-2" class="event-page-numbers"><a>2</a></li>
+                                    <li id="event-page-number-3" class="event-page-numbers"><a>3</a></li>
+                                    <li id="event-page-number-4" class="event-page-numbers"><a>4</a></li>
                                     <li class="event-page-numbers"><a href="apology.html">>></a></li>
                                     <li class="more-events"><a href="apology.html"><i class="fa fa-plus-circle"
                                                 aria-hidden="true"></i>Fler evenemang</a></li>
@@ -580,7 +582,7 @@
         </div>
 
         <!-- Chat bot & elevator button -->
-        
+
         <div class="chat">
             <div id="chat-clickme" class="chat-button">
                 <div class="chat-button-content"><i class="fa fa-commenting-o" aria-hidden="true"></i> Chatta</div>
