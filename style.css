@@ -478,6 +478,7 @@ body {
 .event-page-numbers span:hover {
     background-color: #cb0050;
     color: #fff;
+    cursor: pointer;
 }
 
 .event-page-numbers .page-numbers-active {

@@ -86,13 +86,10 @@ function eventPage4() {
 
 function eventPageNext() {
     if (currentPage == 1) {
-        console.log("fire 1!");
         eventPage2();
     } else if (currentPage == 2) {
-        console.log("fire 2!");
         eventPage3();
     } else if (currentPage == 3) {
-        console.log("fire 3!");
         eventPage4();
     } else {
         alert("For more events, please hit the more events button to the right!")
@@ -101,13 +98,10 @@ function eventPageNext() {
 
 function eventPagePrev() {
     if (currentPage == 2) {
-        console.log("fire 1!");
         eventPage1();
     } else if (currentPage == 3) {
-        console.log("fire 2!");
         eventPage2();
     } else if (currentPage == 4) {
-        console.log("fire 3!");
         eventPage3();
     } else {
         alert("You're already on the first page!")
