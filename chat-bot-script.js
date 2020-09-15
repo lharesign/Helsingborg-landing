@@ -6,10 +6,10 @@ document.getElementById("chat-clickme").addEventListener("click", openChat);
 // If chat bot box display is none, display chat bot box, else hide
 function openChat() {
     var chatBox = document.getElementById("chat-clickme-display");
-    if (chatBox.style.display === "none") {
-      chatBox.style.display = "block";
-    } else {
+    if (chatBox.style.display === "block") {
       chatBox.style.display = "none";
+    } else {
+      chatBox.style.display = "block";
     }
 }
 

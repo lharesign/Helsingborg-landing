@@ -8,7 +8,7 @@ body {
     font-family: Roboto, system, Segoe UI, Tahoma, -apple-system;
 }
 
-.nav-bar-small a:hover, .nav-bar-main-item a:hover, .box-list-item a:hover, .event-list-item a:hover {
+.nav-bar-small a:hover, .nav-bar-main-item a:hover, .box-list-item a:hover, .event-list-item a:hover, .more-events a:hover {
     text-decoration: underline;
 }
 
@@ -63,7 +63,7 @@ body {
     position: relative;
     display: inline-block;
 }
-  
+
 .tooltip .tooltip-text {
     visibility: hidden;
     width: 120px;
@@ -79,7 +79,7 @@ body {
     left: 50%;
     margin-left: -60px;
 }
-  
+
 .tooltip .tooltip-text::after {
     content: "";
     position: absolute;
@@ -90,7 +90,7 @@ body {
     border-style: solid;
     border-color: transparent transparent black transparent;
 }
-  
+
 .tooltip:hover .tooltip-text {
     visibility: visible;
 }
@@ -130,7 +130,6 @@ body {
     width: 100%;
     z-index: 9999;
 }
-
 
 /* CSS for the search area*/
 
@@ -258,7 +257,7 @@ body {
 
 .image-box-container {
     width: 100%;
-    box-shadow: 0 2px 3px rgba(0,0,0,.08);
+    box-shadow: 0 2px 3px rgba(0, 0, 0, .08);
     max-height: 300px;
     min-height: 300px;
     overflow: hidden;
@@ -313,17 +312,17 @@ body {
     display: flex;
     flex-direction: column;
     overflow-y: auto;
-    box-shadow: 0 2px 3px rgba(0,0,0,.08);
+    box-shadow: 0 2px 3px rgba(0, 0, 0, .08);
 }
 
 .questions-list-item {
     border-top: 1px solid #e5e5e5;
-    background: linear-gradient(to bottom,#fff,#f9f9f9);
+    background: linear-gradient(to bottom, #fff, #f9f9f9);
     flex: 1;
     display: flex;
     padding-left: 10px;
     position: relative;
-    align-items: center; 
+    align-items: center;
     min-height: 51px;
 }
 
@@ -337,7 +336,7 @@ body {
 }
 
 .questions-list-item i {
-    position: absolute; 
+    position: absolute;
     right: 10px;
 }
 
@@ -354,15 +353,19 @@ body {
     padding: 10px;
 }
 
+.accordion-panel article p a {
+    word-break: break-all;
+}
+
 .accordion-panel article ul {
     margin-left: 30px;
     list-style-type: none;
 }
 
 .accordion-panel article ul li::before {
-    color:  #ec6701;
+    color: #ec6701;
     content: "\25AA";
-    display: inline-block; 
+    display: inline-block;
     width: 1em;
     margin-left: -1em;
 }
@@ -463,15 +466,21 @@ body {
     flex: 1;
 }
 
-.event-page-numbers a {
+.event-page-numbers span {
     margin: auto;
     padding: 5px;
     box-shadow: 0 2px 3px rgba(0, 0, 0, .08);
     border-radius: 2px;
     background-color: #fff;
+    font-weight: lighter;
 }
 
-.event-page-numbers a:hover {
+.event-page-numbers span:hover {
+    background-color: #cb0050;
+    color: #fff;
+}
+
+.event-page-numbers .page-numbers-active {
     background-color: #cb0050;
     color: #fff;
 }
@@ -487,7 +496,7 @@ body {
     padding-right: 20px;
 }
 
-.event-page-numbers a, .more-events a {
+.event-page-numbers span, .more-events a {
     text-decoration: none;
     color: #000;
 }
@@ -553,16 +562,7 @@ body {
     background: linear-gradient(180deg, #fff 0, #f8f8f8 100%);
     border-radius: 3px;
     overflow: hidden;
-    box-shadow: 0 0.5px 1.8px rgba(0, 0, 0, .015),
-        0 1px 3.7px rgba(0, 0, 0, .022), 
-        0 1.7px 5.8px rgba(0, 0, 0, .027), 
-        0 2.6px 8.3px rgba(0, 0, 0, .031), 
-        0 3.8px 11.3px rgba(0, 0, 0, .035), 
-        0 5.3px 15.2px rgba(0, 0, 0, .039), 
-        0 7.5px 20.5px rgba(0, 0, 0, .043), 
-        0 11px 28.8px rgba(0, 0, 0, .048), 
-        0 16.9px 44px rgba(0, 0, 0, .055), 
-        0 30px 80px rgba(0, 0, 0, .07);
+    box-shadow: 0 0.5px 1.8px rgba(0, 0, 0, .015), 0 1px 3.7px rgba(0, 0, 0, .022), 0 1.7px 5.8px rgba(0, 0, 0, .027), 0 2.6px 8.3px rgba(0, 0, 0, .031), 0 3.8px 11.3px rgba(0, 0, 0, .035), 0 5.3px 15.2px rgba(0, 0, 0, .039), 0 7.5px 20.5px rgba(0, 0, 0, .043), 0 11px 28.8px rgba(0, 0, 0, .048), 0 16.9px 44px rgba(0, 0, 0, .055), 0 30px 80px rgba(0, 0, 0, .07);
     display: flex;
     margin: auto;
     margin-top: 50px;
@@ -582,19 +582,20 @@ body {
 }
 
 .contact-banner-item img {
-   flex: 1;
+    flex: 1;
 }
 
 .contact-banner-item-title {
-  flex: 5;
-  padding-top: 15px;
-  padding-left: 10px;
+    flex: 5;
+    padding-top: 15px;
+    padding-left: 10px;
 }
 
 .contact-banner-item p {
     margin-top: 20px;
     height: 80px;
 }
+
 .contact-banner-link {
     border-top: 1px solid #dbdbdb;
     margin: 20px 0px;
@@ -615,6 +616,8 @@ body {
     text-align: right;
     padding-top: 30px;
     padding-bottom: 60px;
+    max-height: 110px;
+    min-height: 110px;
 }
 
 .contact-banner-extra a {
@@ -622,7 +625,7 @@ body {
     color: #fff;
     transition: font-size 0.5s;
     font-weight: bold;
-    }
+}
 
 .contact-banner-link a:hover, .contact-banner-extra a:hover {
     font-size: 1.1em;
@@ -666,7 +669,7 @@ footer {
 
 .footer-menu-link {
     width: 100%;
-    background-color: rgba(0,0,0,.05);
+    background-color: rgba(0, 0, 0, .05);
     padding: 5px 10px;
     border-radius: 2px;
     margin-top: 4px;
@@ -681,7 +684,7 @@ footer {
 }
 
 .footer-menu-link:hover {
-    background-color: rgba(0,0,0,.07);
+    background-color: rgba(0, 0, 0, .07);
 }
 
 .footer-form {
@@ -776,7 +779,7 @@ footer {
     height: 350px;
     z-index: 99999;
     transition: all .2s ease-in-out;
-    box-shadow: 0 0 15px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
     color: #424242;
     text-align: center;
 }
@@ -784,6 +787,7 @@ footer {
 #chat-clickme-display {
     display: none;
 }
+
 #chat-box-close {
     text-align: right;
     font-size: 1.5em;
@@ -814,12 +818,12 @@ footer {
     right: 20px;
     bottom: 10px;
     opacity: 0;
-    transition: visibility 0s,opacity .3s ease-in-out;
+    transition: visibility 0s, opacity .3s ease-in-out;
     display: block;
     background-color: #cb0050;
     border-radius: 40px;
     height: 40px;
-    box-shadow: 0 5px 7px 0 rgba(0,0,0,.3);
+    box-shadow: 0 5px 7px 0 rgba(0, 0, 0, .3);
 }
 
 .scroll-elevator-sticky {
@@ -862,10 +866,9 @@ footer {
     margin: auto;
 }
 
-
-
 .mySlides {
-    display: none; /* Hide the images by default */
+    display: none;
+    /* Hide the images by default */
 }
 
 .prev, .next {
@@ -881,7 +884,7 @@ footer {
     font-size: 18px;
     transition: 0.6s ease;
     user-select: none;
-    background: rgba(255,255,255,.75);
+    background: rgba(255, 255, 255, .75);
 }
 
 .next {
@@ -911,12 +914,11 @@ footer {
 /* CSS for the Slider Text & Dots */
 
 .slider-info {
-    color: #fff;
-    background-color: #cb0050;
-    opacity: 0.75;
+    color: rgba(255, 255, 255, 1);
+    background: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), linear-gradient(rgba(203, 0, 80, .8), rgba(203, 0, 80, .8));
     padding: 8px 12px;
     position: absolute;
-    bottom: 22px;
+    bottom: 4px;
     width: 100%;
     height: 100px;
     padding-bottom: 40px;
@@ -926,10 +928,17 @@ footer {
     font-size: 1.3em;
 }
 
+.slider-dots {
+    position: absolute;
+    bottom: 5px;
+    left: 43%;
+    opacity: 0.7;
+}
+
 .dot {
     cursor: pointer;
-    height: 15px;
-    width: 15px;
+    height: 11px;
+    width: 11px;
     margin: 0 2px;
     background-color: rgb(124, 124, 124);
     border-radius: 50%;
@@ -937,8 +946,9 @@ footer {
     transition: background-color 0.6s ease;
 }
 
-.active, .dot:hover {
+.slider-dots .active, .dot:hover {
     background-color: #cb0050;
+    opacity: 1;
 }
 
 /* Fading animation for slider */
